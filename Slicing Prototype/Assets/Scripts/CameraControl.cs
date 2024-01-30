@@ -16,13 +16,13 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("A")) {
-            transform.position = new Vector3(-5f, -0.8f, trans.position.z); 
+        if (Input.GetKeyDown("a")) {
+            transform.position += new Vector3(-5f, -0.8f, trans.position.z); 
         }
 
-        if (Input.GetKeyDown("D"))
+        if (Input.GetKeyDown("d"))
         {
-            transform.position = new Vector3(-5f, -0.8f, trans.position.z);
+            transform.position += new Vector3(-5f, -0.8f, trans.position.z);
         }
     }
 }
