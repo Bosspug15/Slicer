@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraControl : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class CameraControl : MonoBehaviour
         if (Input.GetKeyDown("d"))
         {
             transform.position += new Vector3(-5f, -0.8f, trans.position.z);
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
