@@ -7,6 +7,7 @@ public class CameraControl : MonoBehaviour
 {
 
     private Transform trans;
+    [SerializeField] private Transform cubeTrans;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +18,16 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("a")) {
-            transform.position += new Vector3(-5f, -0.8f, trans.position.z); 
+
+
+
+        if (Input.GetKeyDown("a")) { 
+            transform.RotateAround(cubeTrans.position, Vector3.up, 5f);
         }
 
         if (Input.GetKeyDown("d"))
         {
-            transform.position += new Vector3(-5f, -0.8f, trans.position.z);
+            transform.RotateAround(cubeTrans.position, Vector3.up, -5f);
         }
 
         if (Input.GetKeyDown("r"))
